@@ -9,6 +9,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">
+
+    </a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= link_to "Guests", guests_path %></li>
+      <li><%= link_to "Episodes", episodes_path %></li>
+      <li><%= link_to "Add Appearance", new_appearance_path%></a></li>
+    </ul>
+  </div>
+</nav>
+    <div class="container">
+      <%= yield %>
+
+    </div>
   </body>
 </html>

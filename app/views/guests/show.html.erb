@@ -2,3 +2,9 @@
 
 <h3><%= @guest.occupation %></h3>
 
+<h3>Episode Appearances</h3>
+<ul>
+  <% @guest.episodes.each do |episode| %>
+  <li><%= link_to episode.date, episode_path(episode) %></li>
+  <% end %>
+</ul>
