@@ -1,4 +1,12 @@
 // Place all the styles related to the Appearances controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// @import "materialize";
+@import "materialize";
+
+.nav-wrapper{
+ background-color: blue !important;
+}
+
+.btn {
+  background-color: red !important;
+}

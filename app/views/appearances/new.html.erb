@@ -1,10 +1,12 @@
 <h1>Create an Appearance</h1>
 
 <%= form_for @appearance do |f| %>
-  <%= f.collection_select :episode_id, Episode.all, :id, :date %>
-  <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+  Choose Episode
+  <%= f.collection_select :episode_id, Episode.all, :id, :date, { prompt: "Choose an episode" }, class: "browser-default"  %>
+  Choose Guest
+  <%= f.collection_select :guest_id, Guest.all, :id, :name, { prompt: "Choose a guest" }, class: "browser-default"  %>
   <%= f.label :rating %>
   <%= f.number_field :rating, in: (1..5) %>
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit %>
+  <%= f.submit class:"btn"%>
 <% end %>
