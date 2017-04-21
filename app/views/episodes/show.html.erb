@@ -1,6 +1,8 @@
 <h1>Episode</h1>
 <% appearance = Appearance.find_by(episode_id: @episode.id) %>
+<% if appearance %>
 <%= link_to "Edit Appearance", edit_appearance_path(appearance) %>
+<% end %>
 <h3><%= "Date: #{@episode.date}" %></h3>
 
 <h3>Guests</h3>
